@@ -18,5 +18,3 @@ if get_clothes > 0:
     rack += 1
 
 print(rack)
-
-
