@@ -43,7 +43,8 @@ def boom(matrix, position_one, position_two):
 
 for i in coordinates:
     x, c, *args = map(int, i[:])
-    boom(matrix, x, c)
+    if matrix[x][c] > 0:
+        boom(matrix, x, c)
 
 sumata = 0
 not_dead = 0
