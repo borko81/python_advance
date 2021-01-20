@@ -13,16 +13,18 @@ for f_row in range(n):
     matrix.append(input().split())
 
 
-def obhod_matrix(matrix, search):
-    for x in range(n):
-        for y in range(n):
-            if matrix[x][y] == search:
+def obhod_matrix(matr, search):
+    for matr_x in range(n):
+        for matr_y in range(n):
+            if matr[matr_x][matr_y] == search:
                 return x, y
     return "No more coal"
+
 
 start_position = obhod_matrix(matrix, 's')
 coal = 0
 x, y = map(int, start_position)
+
 
 def find_total_coal():
     temp = 0
