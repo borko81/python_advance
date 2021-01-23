@@ -1,9 +1,17 @@
-from functools import reduce
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
 
-a = {
-    'test': lambda x, y: x * y,
-}
 
-numbers = [1, 2, 3]
+def check_rqcurse(arr):
+    if len(arr) == 1:
+        house = arr[0]
+        print("Left {}".format(house))
 
-print(reduce(a['test'], numbers))
+    else:
+        mid = len(arr) // 2
+        f = arr[:mid]
+        l = arr[mid:]
+        check_rqcurse(f)
+        check_rqcurse(l)
+
+
+check_rqcurse(arr)
